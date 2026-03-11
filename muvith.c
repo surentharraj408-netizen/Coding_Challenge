@@ -4,17 +4,17 @@ int main() {
     int arr[10], i, j, temp;
 
     printf("Enter 10 numbers:\n");
-    for(i = 0; i < 10; i++) {
+    for(i = 0; i < 10; i++) {   // corrected
         scanf("%d", &arr[i]);
     }
 
-    // Bubble Sort (adjacent comparisons)
+    // Bubble sort
     for(i = 0; i < 9; i++) {
-        for(j = 0; j < 9 - i; j++) {
-            if(arr[j] > arr[j + 1]) {
-                temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
+        for(j = i + 1; j < 10; j++) {   // corrected
+            if(arr[i] > arr[j]) {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
             }
         }
     }
@@ -26,4 +26,3 @@ int main() {
 
     return 0;
 }
-

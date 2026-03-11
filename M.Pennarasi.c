@@ -8,9 +8,9 @@ int main() {
         scanf("%d", &arr[i]);
     }
 
-    // Bubble Sort (adjacent comparisons)
-    for(i = 0; i < 9; i++) {
-        for(j = 0; j < 9 - i; j++) {
+    // Bubble sort
+    for(i = 0; i < 10 - 1; i++) {
+        for(j = 0; j < 10 - i - 1; j++) {
             if(arr[j] > arr[j + 1]) {
                 temp = arr[j];
                 arr[j] = arr[j + 1];
@@ -26,4 +26,3 @@ int main() {
 
     return 0;
 }
-

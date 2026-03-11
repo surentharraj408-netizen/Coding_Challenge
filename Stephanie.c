@@ -1,17 +1,23 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     int arr[10], i, j, temp;
 
     printf("Enter 10 numbers:\n");
-    for(i = 0; i < 10; i++) {   // ✅ Corrected: i < 10
+
+    for(i = 0; i < 10; i++)
+    {
         scanf("%d", &arr[i]);
     }
 
-    // Bubble sort
-    for(i = 0; i < 10; i++) {
-        for(j = i + 1; j < 10; j++) {   // ✅ Corrected: j = i+1
-            if(arr[i] > arr[j]) {
+    // Bubble Sort
+    for(i = 0; i < 9; i++)
+    {
+        for(j = i + 1; j < 10; j++)
+        {
+            if(arr[i] > arr[j])
+            {
                 temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
@@ -19,10 +25,14 @@ int main() {
         }
     }
 
-    printf("Sorted numbers:\n");
-    for(i = 0; i < 10; i++) {
+    printf("\nSorted numbers are:\n");
+
+    for(i = 0; i < 10; i++)
+    {
         printf("%d ", arr[i]);
     }
+
+    printf("\n");
 
     return 0;
 }

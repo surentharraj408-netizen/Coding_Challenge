@@ -5,12 +5,15 @@ int main() {
 
     printf("Enter 10 numbers:\n");
     for(i = 0; i < 10; i++) {
-        scanf("%d", &arr[i]);
+        if(scanf("%d", &arr[i]) != 1) {  // check valid input
+            printf("Invalid input.\n");
+            return 1;
+        }
     }
 
     // Bubble Sort
     for(i = 0; i < 9; i++) {
-        for(j = 0; j < 9 - i; j++) {
+        for(j = 0; j < 9-i; j++) {     // standard Bubble Sort
             if(arr[j] > arr[j+1]) {
                 temp = arr[j];
                 arr[j] = arr[j+1];
@@ -23,7 +26,7 @@ int main() {
     for(i = 0; i < 10; i++) {
         printf("%d ", arr[i]);
     }
+    printf("\n");  // add newline at the end
 
     return 0;
 }
-
